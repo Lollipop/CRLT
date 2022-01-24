@@ -53,6 +53,7 @@ Rather than training with the web GUI, users can also train by running:
 ```bash
 python main.py examples/simcse.json
 ```
+Using different types of devices or different versions of CUDA/other softwares may lead to slightly different performance:
 
 | STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
 |:------|:------|:------|:------|:------|:-------------|:----------------|:-----:|
