@@ -59,4 +59,8 @@ Using different types of devices or different versions of CUDA/other softwares m
 |:------|:------|:------|:------|:------|:-------------|:----------------|:-----:|
 | 71.61 | 81.99 | 75.13 | 81.39 | 78.78 |    77.93     |      69.17      | 76.57 |
 
+## Bugs or questions?
+
+If you have any questions related to the code or the usage, feel free to email `xiaoming2021@iscas.ac.cn`. If you encounter any problems when using the code, or want to report a bug, you can open an issue. Please try to specify the problem with details so we can help you better and quicker!
+
 
