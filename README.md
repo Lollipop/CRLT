@@ -38,6 +38,11 @@ bash download_dataset.sh
 
 For unsupervised training, we use sentences from English Wikipedia provided by [SimCSE](https://arxiv.org/pdf/2104.08821.pdf), and the relevant dataset should be download and moved to the `data/wiki` folder.
 
+|Filename | Data Path | AliyunDrive |
+|:--------|:----------|:-----------:|
+| wiki1m_for_simcse.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
+| wiki.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
+
 ### Training
 
 #### GUI
