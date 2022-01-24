@@ -12,7 +12,7 @@ The goal of CRLT is to provide an out-of-the-box toolkit for contrastive learnin
 
 ### Requirements
 
-First, install PyTorch by following the instructions from [the official website](https://pytorch.org). Please use the correct `1.7.1` version corresponding to your platforms/CUDA versions. PyTorch version higher than `1.7.1` should also work. 
+First, install PyTorch by following the instructions from [the official website](https://pytorch.org). Please use the correct `1.10` version corresponding to your platforms/CUDA versions. PyTorch version higher than `1.10` should also work. 
 
 ```bash
 pip install torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
@@ -21,7 +21,7 @@ pip install torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.
 Then run the following script to install the remaining dependencies,
 
 ```bash
-pip install -r requirements.txt
+conda env create -f requirements.yaml
 ```
 
 The evaluation code for sentence embeddings is based on a modified version of [SentEval](https://github.com/facebookresearch/SentEval). It evaluates sentence embeddings on semantic textual similarity (STS) tasks and downstream transfer tasks. For STS tasks, our evaluation takes the "all" setting, and report Spearman's correlation. See [SimCSE](https://arxiv.org/pdf/2104.08821.pdf) for more details.
@@ -36,7 +36,7 @@ bash download_dataset.sh
 
 ### Data
 
-For unsupervised SimCSE, we sample 1 million sentences from English Wikipedia; for supervised SimCSE, we use the SNLI and MNLI datasets. You can run data/download_wiki.sh and data/download_nli.sh to download the two datasets.
+For unsupervised training, we use sentences from English Wikipedia provided by [SimCSE](https://arxiv.org/pdf/2104.08821.pdf), and the relevant dataset should be download and moved to the `data/wiki` folder.
 
 ### Training
 
@@ -46,11 +46,16 @@ We provide example training scripts for SimCSE (the unsupervised version) by run
 conda activate crlt
 python app.py
 ```
-After editing the training parmameters, users click the `RUN` botton and will get the evaluation result in the same page.
+After editing the training parameters, users click the `RUN` button and will get the evaluation result on the same page.
 
 #### Terminal
-Rather than trainging with the web GUI, users can alse training by running:
+Rather than training with the web GUI, users can also train by running:
 ```bash
 python main.py examples/simcse.json
 ```
+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
+|:------|:------|:------|:------|:------|:-------------|:----------------|:-----:|
+| 71.61 | 81.99 | 75.13 | 81.39 | 78.78 |    77.93     |      69.17      | 76.57 |
+
 
