@@ -28,8 +28,8 @@ The evaluation code for sentence embeddings is based on a modified version of [S
 
 Before training, please download the relevent datasets by running:
 ```bash
-cd SentEval/data/downstream/
-bash download_dataset.sh
+cd utils/SentEval/data/downstream/
+bash download.sh
 ```
 
 ## Getting Started
