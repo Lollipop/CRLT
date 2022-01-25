@@ -50,7 +50,7 @@ For unsupervised training, we use sentences from English Wikipedia provided by [
 | wiki1m_for_simcse.csv | data/wiki/ | [Download]() |
 | wiki.csv | data/wiki/ | [Download]() |
 
-When training, CRLT use the STSB task to evaluate the model, so the used file need to be download to `data/STSB`:
+When training, CRLT use the dev set of STSB task to evaluate the model, so the used file need to be download to `data/STSB` folder:
 
 |Filename | Data Path | AliyunDrive |
 |:--------|:----------|:-----------:|
