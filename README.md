@@ -32,6 +32,8 @@ cd utils/SentEval/data/downstream/
 bash download.sh
 ```
 
+install senteval
+
 ## Getting Started
 
 ### Data
@@ -42,6 +44,8 @@ For unsupervised training, we use sentences from English Wikipedia provided by [
 |:--------|:----------|:-----------:|
 | wiki1m_for_simcse.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
 | wiki.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
+
+data/STSB
 
 ### Training
 
