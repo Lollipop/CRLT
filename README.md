@@ -12,7 +12,7 @@ The goal of CRLT is to provide an out-of-the-box toolkit for contrastive learnin
 
 ### Requirements
 
-First, run the following script to install the remaining dependencies
+First, run the following script to install the relevant dependencies
 
 ```bash
 conda env create -f requirements.yaml
@@ -21,6 +21,7 @@ conda env create -f requirements.yaml
 Then, install PyTorch by following the instructions from [the official website](https://pytorch.org). Please use the correct `1.10` version corresponding to your platforms/CUDA versions. PyTorch version higher than `1.10` should also work. For example, if you use Linux and CUDA10.2, install PyTorch by the following command,
 
 ```bash
+conda activate crlt
 conda install pytorch==1.10.0 cudatoolkit=10.2 -c pytorch
 ```
 
@@ -46,10 +47,15 @@ For unsupervised training, we use sentences from English Wikipedia provided by [
 
 |Filename | Data Path | AliyunDrive |
 |:--------|:----------|:-----------:|
-| wiki1m_for_simcse.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
-| wiki.csv | data/wiki/ | [Download](https://www.aliyundrive.com/s/aZrMskbSYW7) |
+| wiki1m_for_simcse.csv | data/wiki/ | [Download]() |
+| wiki.csv | data/wiki/ | [Download]() |
 
-data/STSB
+When training, CRLT use the STSB task to evaluate the model, so the used file need to be download to `data/STSB`:
+
+|Filename | Data Path | AliyunDrive |
+|:--------|:----------|:-----------:|
+| stsb_above_4.csv | data/STSB/ | [Download]() |
+
 
 ### Training
 
