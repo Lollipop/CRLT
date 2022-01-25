@@ -54,7 +54,7 @@ When training, CRLT use the dev set of STSB task to evaluate the model, so the u
 
 |Filename | Data Path | Google Drive |
 |:--------|:----------|:-----------:|
-| stsb_above_4.csv | data/STSB/ | [Download](https://drive.google.com/drive/folders/1FhlRcNR6P5q_58KHZoYctgGwTkYgzt8T?usp=sharing) |
+| stsb_above_4.csv | data/STSB/ | [Download](https://drive.google.com/file/d/1xD6Qys2AEohTNexJe9cvKBE8xoW9jg25/view?usp=sharing) |
 
 
 ### Training
