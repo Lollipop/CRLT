@@ -31,8 +31,11 @@ Before training, please download the relevent datasets by running:
 cd utils/SentEval/data/downstream/
 bash download.sh
 ```
-
-install senteval
+Then, running the command to install the SentEval toolkit:
+```bash
+cd utils/SentEval
+python setyp.py install
+```
 
 ## Getting Started
 
