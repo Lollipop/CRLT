@@ -34,12 +34,12 @@ def index():
 
 @socketio.on("tensorboard")
 def tensorboard():
-    # if os.path.exists(logging_dir):
-    commands = f"tensorboard --logdir tensorboard_logs/models/t5 --port 6006"
-    subprocess.call(commands, shell=True)
-    message = "success"
-    # else:
-    #     message = "failure"
+    if os.path.exists(logging_dir):
+        commands = f"tensorboard --logdir {logging_dir} --port 6006"
+        subprocess.call(commands, shell=True)
+        message = "success"
+    else:
+        message = "failure"
     socketio.emit('tensorboard_response', {'message': message})
 
 
