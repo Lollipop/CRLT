@@ -5,7 +5,7 @@ This repository contains the code and relevant instructions of CRLT.
 ## Overview
 The goal of CRLT is to provide an out-of-the-box toolkit for contrastive learning. Users only need to provide unlabeled data and edit a configuration file in the format of JSON, and then they can quickly train, use and evaluate representation learning models. CRLT consists of 6 critical modules, including data synthesis, negative sampling, representation encoders, learning paradigm, optimizing strategy and model evaluation. For each module, CRLT provides various popular implementations and therefore different kinds of CL architectures can be easily constructed using CRLT. 
 
-![framework](./materials/flow.svg)
+![framework](./materials/flow.jpg)
 
 
 ## Installation
