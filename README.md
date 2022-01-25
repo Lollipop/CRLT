@@ -45,16 +45,16 @@ python setyp.py install
 
 For unsupervised training, we use sentences from English Wikipedia provided by [SimCSE](https://arxiv.org/pdf/2104.08821.pdf), and the relevant dataset should be download and moved to the `data/wiki` folder:
 
-|Filename | Data Path | AliyunDrive |
+|Filename | Data Path | Google Drive |
 |:--------|:----------|:-----------:|
-| wiki1m_for_simcse.csv | data/wiki/ | [Download]() |
-| wiki.csv | data/wiki/ | [Download]() |
+| wiki1m_for_simcse.csv | data/wiki/ | [Download](https://drive.google.com/file/d/1Wqtlczfs_6uUeVzrfO7vHQmGcJcytJ7z/view?usp=sharing) |
+| wiki.csv | data/wiki/ | [Download](https://drive.google.com/file/d/1y_nS6lj32Asxb-aWKVuYWFQNC08eQJV5/view?usp=sharing) |
 
 When training, CRLT use the dev set of STSB task to evaluate the model, so the used file need to be download to `data/STSB` folder:
 
-|Filename | Data Path | AliyunDrive |
+|Filename | Data Path | Google Drive |
 |:--------|:----------|:-----------:|
-| stsb_above_4.csv | data/STSB/ | [Download]() |
+| stsb_above_4.csv | data/STSB/ | [Download](https://drive.google.com/drive/folders/1FhlRcNR6P5q_58KHZoYctgGwTkYgzt8T?usp=sharing) |
 
 
 ### Training
