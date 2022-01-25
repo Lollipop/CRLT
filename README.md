@@ -15,7 +15,7 @@ The goal of CRLT is to provide an out-of-the-box toolkit for contrastive learnin
 First, install PyTorch by following the instructions from [the official website](https://pytorch.org). Please use the correct `1.10` version corresponding to your platforms/CUDA versions. PyTorch version higher than `1.10` should also work. For example, if you use Linux and CUDA10.2, install PyTorch by the following command,
 
 ```bash
-conda install pytorch cudatoolkit=11.0 -c pytorch
+conda install pytorch==1.10.0 cudatoolkit=10.2 -c pytorch
 ```
 
 Then run the following script to install the remaining dependencies,
