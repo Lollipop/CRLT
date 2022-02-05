@@ -1,10 +1,13 @@
 {
-    "train_file": "data/wiki/wiki1m_for_simcse.csv",
+    "train_file": "data/wiki/wiki.csv",
     "overwrite_cache": true,
     "overwrite_output_dir": true,
     "generator_params": {
         "query": {
-            "dropout": null
+            "delete": {
+                "granularity": "word",
+                "probability": 0.3
+            }
         }
     },
     "model_name_or_path": "bert-base-uncased",
@@ -17,7 +20,7 @@
             "predictor": null
         }
     },
-    "output_dir": "results/simcse",
+    "output_dir": "results/method",
     "do_train": true,
     "do_eval": true,
     "do_predict": true,
@@ -27,7 +30,7 @@
     "greater_is_better": true,
     "evaluation_strategy": "steps",
     "eval_steps": 125,
-    "logging_dir": "tensorboard_logs/simcse",
+    "logging_dir": "tensorboard_logs/method",
     "logging_strategy": "steps",
     "logging_first_step": true,
     "logging_steps": 125,

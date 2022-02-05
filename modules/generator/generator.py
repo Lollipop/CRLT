@@ -8,6 +8,7 @@ from .data_augmentor import (
     MaskAugmentor,
     ShuffleAugmentor
 )
+from .custom_generator import CustomGenerator
 
 import copy
 from typing import List, Dict
@@ -85,6 +86,10 @@ def get_funcs(params: Dict):
                     granularity=v["granularity"],
                     number=v["number"]
                 )
+            )
+        elif k == "custom":
+            funcs.append(
+                CustomGenerator(v)
             )
 
     return funcs

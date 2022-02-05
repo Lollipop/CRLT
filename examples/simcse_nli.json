@@ -1,41 +1,35 @@
 {
-    "train_file": "data/wiki/wiki1m_for_simcse.csv",
+    "train_file": "data/nli/nli_entailment_contradiction.csv",
     "overwrite_cache": true,
     "overwrite_output_dir": true,
-    "generator_params": {
-        "query": {
-            "dropout": null
-        }
-    },
     "model_name_or_path": "bert-base-uncased",
     "extractor_params": {
         "sentence_representation": {
             "pooler": "cls",
             "projector": {
                 "hidden_size": 768
-            },
-            "predictor": null
+            }
         }
     },
-    "output_dir": "results/simcse",
+    "output_dir": "results/nli",
     "do_train": true,
     "do_eval": true,
     "do_predict": true,
     "max_seq_length": 32,
-    "per_device_train_batch_size": 64,
-    "metric_for_best_model": "avg_sts",
+    "per_device_train_batch_size": 128,
+    "metric_for_best_model": "stsb_spearman",
     "greater_is_better": true,
     "evaluation_strategy": "steps",
     "eval_steps": 125,
-    "logging_dir": "tensorboard_logs/simcse",
+    "logging_dir": "tensorboard_logs/nli",
     "logging_strategy": "steps",
     "logging_first_step": true,
     "logging_steps": 125,
     "load_best_model_at_end": true,
     "save_total_limit": 2,
-    "num_train_epochs": 1,
-    "learning_rate": 3e-5,
-    "weight_decay": 0.01,
-    "early_stopping_patience": 20,
+    "num_train_epochs": 3,
+    "learning_rate": 5e-5,
+    "early_stopping_patience": 15,
+    "use_negative": true,
     "seed": 42
 }

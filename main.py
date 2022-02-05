@@ -169,7 +169,7 @@ class ModelTrainingArguments:
     Arguments pertaining to which model/config/tokenizer we are going to fine-tune from.
     """
     model_name_or_path: Optional[str] = field(
-        default="/share/model/transformers/bert/uncased_L-12_H-768_A-12",
+        default="bert-base-uncased",
         metadata={
             "help": "Path to pretrained model or model identifier from huggingface.co/models"}
     )
@@ -277,7 +277,7 @@ class ContrastiveLearningTrainingArguments(TrainingArguments):
     loss_fn: Optional[str] = field(
         default="infonce",
         metadata={
-            "help": "TODO"
+            "help": "The loss function for training."
         }
     )
     temperature: Optional[float] = field(
@@ -431,7 +431,6 @@ def main():
         proxies=util_args.proxies if util_args.proxies is not None else None
     )
 
-    # TODO: check if use the correct column.
     non_label_column_names = [
         name for name in raw_train_dataset.column_names if name != "label"]
     if training_args.use_negative:
@@ -608,7 +607,7 @@ def main():
     # Data collator will default to default_data_collator, so we change it if we didn't do the padding.
     if data_args.pad_to_max_length:
         data_collator = default_data_collator
-    # TODO: this may accelerate the training progress!!
+    # TODO: this can accelerate the training progress!!
     elif training_args.fp16:
         data_collator = DataCollatorWithPadding(
             tokenizer, pad_to_multiple_of=8)

@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+**/__pycache__/**
+*.py[cod]
+*$py.class
+
+utils/SentEval/dist/*
+utils/SentEval/build/lib/*
+utils/SentEval/SentEval.egg-info/*
+data/wiki/wiki1m_for_simcse.csv
+cache/datasets/*
+cache/models/*
+results/*
+tensorboard_logs/*
+data/STSB/stsb_above_4.csv

@@ -1,1 +1,1 @@
-
+This folder holds the model and data processing caches.

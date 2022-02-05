@@ -1,4 +1,4 @@
-SimCSE modification to SentEval:
+Our modification to SentEval:
 
 1. Add the `all` setting to all STS tasks.
 2. Change STS-B and SICK-R to not use an additional regressor.

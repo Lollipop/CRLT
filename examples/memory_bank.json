@@ -1,6 +1,6 @@
 {
     "train_file": "data/wiki/wiki1m_for_simcse.csv",
-    "overwrite_cache": true,
+    "overwrite_cache": false,
     "overwrite_output_dir": true,
     "generator_params": {
         "query": {
@@ -17,7 +17,7 @@
             "predictor": null
         }
     },
-    "output_dir": "results/simcse",
+    "output_dir": "results/memory_bank",
     "do_train": true,
     "do_eval": true,
     "do_predict": true,
@@ -27,7 +27,7 @@
     "greater_is_better": true,
     "evaluation_strategy": "steps",
     "eval_steps": 125,
-    "logging_dir": "tensorboard_logs/simcse",
+    "logging_dir": "tensorboard_logs/memory_bank",
     "logging_strategy": "steps",
     "logging_first_step": true,
     "logging_steps": 125,
@@ -37,5 +37,6 @@
     "learning_rate": 3e-5,
     "weight_decay": 0.01,
     "early_stopping_patience": 20,
-    "seed": 42
+    "seed": 42,
+    "memory_bank_size": 4096
 }

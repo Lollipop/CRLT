@@ -170,7 +170,8 @@ class MSE(nn.Module):
         predicted_k=None,
         m=None
     ):
-        # TODO: 这里应该是对称的函数,但是因为模型forward没有支持对称处理,所以只有单边.
+        # TODO: This should be a symmetric function, but because the model forward
+        # does not support symmetric processing, it has only one side.
         predicted_q = predicted_q.norm(p=2, dim=-1)
         projected_k = projected_k.detach().norm(p=2, dim=-1)
 

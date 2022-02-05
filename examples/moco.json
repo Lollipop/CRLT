@@ -17,7 +17,7 @@
             "predictor": null
         }
     },
-    "output_dir": "results/simcse",
+    "output_dir": "results/moco",
     "do_train": true,
     "do_eval": true,
     "do_predict": true,
@@ -27,15 +27,18 @@
     "greater_is_better": true,
     "evaluation_strategy": "steps",
     "eval_steps": 125,
-    "logging_dir": "tensorboard_logs/simcse",
+    "logging_dir": "tensorboard_logs/moco",
     "logging_strategy": "steps",
     "logging_first_step": true,
     "logging_steps": 125,
     "load_best_model_at_end": true,
     "save_total_limit": 2,
-    "num_train_epochs": 1,
+    "num_train_epochs": 5,
     "learning_rate": 3e-5,
     "weight_decay": 0.01,
-    "early_stopping_patience": 20,
-    "seed": 42
+    "early_stopping_patience": 50,
+    "seed": 42,
+    "memory_bank_size": 4096,
+    "use_siamese_encoder": true,
+    "use_momentum": true
 }
